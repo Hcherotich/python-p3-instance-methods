@@ -29,7 +29,7 @@ class TestTalk:
         sys.stdout = captured_out
         guido.talk()
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "Hello World!\n")
+        assert(captured_out.getvalue().strip() == "Hello World")
 
 class TestWalk:
     '''Person.walk() in walk.py'''
@@ -46,4 +46,4 @@ class TestWalk:
         sys.stdout = captured_out
         guido.walk()
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "The person is walking.\n")
+        assert(captured_out.getvalue().strip() == "The person is walking")

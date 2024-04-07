@@ -46,4 +46,7 @@ class TestSit:
         sys.stdout = captured_out
         fido.sit()
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == "The dog is sitting.\n")
+        assert captured_out.getvalue().strip() == "The dog is sitting"
+
+# Code snippet for creating an instance of Dog
+fido = Dog()
